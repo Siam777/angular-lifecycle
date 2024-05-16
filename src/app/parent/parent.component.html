@@ -1,0 +1,14 @@
+<h1>Parent Component</h1>
+  
+<button (click)="toggleChild()">Toggle Child</button><br>
+
+<input type="text" [(ngModel)]="name">
+
+<app-child *ngIf="isChild" [name]="name">
+  <h2 #projectedContent>Content Projection from Parent to Show in Child</h2>
+</app-child>
+
+<!--To check without ngIf what happens-->
+<!-- <app-child [name]="name">
+    <h2 #projectedContent>Content Projection from Parent to Show in Child</h2>
+  </app-child> -->
